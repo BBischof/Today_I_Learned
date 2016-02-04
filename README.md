@@ -44,7 +44,12 @@ Tope means to drink to excess, taupe means mole en francais, which is where the 
 
 ## Setting this up on your machine
 
-A few little steps to get things started. 
+A few little steps to get things start:
+
+- create the directory for your factlets to live
+- edit your config file to be the name of the directory you like
+- make a git repo for things to live
+- add to your path for maximum convenience
 
 ## Further work
 
