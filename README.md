@@ -53,9 +53,17 @@ A few little steps to get things start:
 
 ## Further work
 
-Perhaps it would be nice to build a little viewer for these. I'm not yet sure how that would look/work. 
+Perhaps it would be nice to build a little viewer for these. Current idea is similar to [calendar view](http://bl.ocks.org/KathyZ/c2d4694c953419e0509b) with color being number of TIL submissions for that day, and mouseover shows their names, click is a redirect to the github directory. Will try to build this viz sometime soonishly.
+
+It would be fun to have flags for twitter and facebook, but I dont know how to do that just yet.
 
 ## Steal my code
 
 Feel free to steal my code and run this on your own machine. But please tweet at me if so: @bebischof 
+
+Also feel welcome to submit suggestions or improvements.
+
+Be well, keep learning. 
+
+-B
 
