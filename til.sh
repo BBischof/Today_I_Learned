@@ -13,6 +13,9 @@ then
     	mkdir $factlet_dir/$now/
 	} &> /dev/null
     printf "#  Today I learned about: $1 \n \n$2 \n \n...and now, you've learned that too!\n" > $factlet_dir/$now/$name.md
+    git add $factlet_dir/$now/$name.md
+    git commit -m "new factlet for $now"
+    git push origin 
 else
     echo "O.K.; keep thinking!"
 fi

@@ -4,22 +4,22 @@ A fun little bash script to keep track of factoids, observations, and ideas to s
 
 ## The Basic Idea
 
-```
-You're reading online and you learn that 'tope' means to drink to excess, and that 'taupe'--the color--is named after the French word for mole. 
-You don't want to tweet this, or fbook it, or text it to twenty people, but you want to log it somewhere...
-You push it to TIL and go on your way. You can then look back later to see your fun facts.
-```
+
+- You're reading online and you learn that 'tope' means to drink to excess, and that 'taupe'--the color--is named after the French word for mole. 
+- You don't want to tweet this, or fbook it, or text it to twenty people, but you want to log it somewhere...
+- You push it to TIL and go on your way. You can then look back later to see your fun facts.
+
 
 ## Functionality 
 
 In a bash shell:
 ```(Bash)
-$ til 'Tope' 'Tope means to drink to excess, taupe means mole en francais, which is where the color comes from.''
+$ til 'Tope' 'Tope means to drink to excess, taupe means mole en francais, which is where the color comes from.'
 ```
 
 The script does:
 ```
-echo 'Tope means to drink to excess, taupe means mole en francais, which is where the color comes from.'
+echo "Create a factlet named 'tope' containing 'Tope means to drink to excess, taupe means mole en francais, which is where the color comes from.'
 echo "Is this ok? Y/N"
 if Y:
 	get date from system
