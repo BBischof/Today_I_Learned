@@ -18,7 +18,7 @@ $ til "Tope" "Tope means to drink to excess, taupe means mole en francais, which
 ```
 
 Notes: 
-- I recommend double quotes because otherwise you'll get into trouble with apostrophes.
+- I recommend double quotes because otherwise you'll get into trouble with apostrophes, however, if you want to use an exclamation point, you're gonna need to use single quotes. A trick for getting apostrophes to work inside single quotes is to type `'\''` for each apostrophe. A trick for getting exclamation points in double quotes is similar, `"\!"`. So to each, one's own. I think it makes more sense to use double quotes as the default and escape the `!` since in theory you'll be using less of these.
 - A sneaky little free integration is that if you know markdown, you can slip that in. A great example of this is for links where the markdown is simple and it really powers-up your factlets.
 - Don't forget you can go edit all the files manually and just push to git when you're ready. Clean up them typos!
 

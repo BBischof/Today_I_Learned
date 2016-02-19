@@ -1,21 +1,23 @@
 #!/bin/bash
 
-echo "Create a factlet named '$1' containing '$2'?"
+TITLE=$1
+FACTLET=$2
+echo "Create a factlet named '$TITLE' containing '$FACTLET'?"
 read -r -p "Are you sure? [y/N] " response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
 then
 #    echo "said yes"
 	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     source $DIR/config
-    name="${1// /_}"
-    now="$(date +'%m_%d_%Y')"
-    #echo $now
+    NAME="${1// /_}"
+    NOW="$(date +'%m_%d_%Y')"
+    #echo $NOW
     {
-    	mkdir $DIR/$factlet_dir/$now/
+    	mkdir $DIR/$factlet_dir/$NOW/
 	} &> /dev/null
-    printf "#  Today I learned about: $1 \n \n$2 \n \n...and now, you've learned that too!\n" > $DIR/$factlet_dir/$now/$name.md
-    git -C $DIR/ add $DIR/$factlet_dir/$now/$name.md
-    git -C $DIR/ commit -m "new factlet for $now"
+    printf "#  Today I learned about: $TITLE \n \n$FACTLET \n \n...and now, you've learned that too!\n" > $DIR/$factlet_dir/$NOW/$NAME.md
+    git -C $DIR/ add $DIR/$factlet_dir/$NOW/$NAME.md
+    git -C $DIR/ commit -m "new factlet for $NOW"
     git -C $DIR/ push origin 
 else
     echo "O.K.; keep thinking!"
