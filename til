@@ -16,9 +16,18 @@ then
     	mkdir $DIR/$factlet_dir/$NOW/
 	} &> /dev/null
     printf "#  Today I learned about: $TITLE \n \n$FACTLET \n \n...and now, you've learned that too!\n" > $DIR/$factlet_dir/$NOW/$NAME.md
+    LAST="$(tail -1 $DIR/visualization_things/factletdata.csv | awk -F',' '{print $1}')"
+    if [ $LAST == $(date +'%Y-%m-%d') ]
+    then
+        sed '$d' < $DIR/visualization_things/factletdata.csv > tmp ; mv tmp $DIR/visualization_things/factletdata.csv
+        echo "tried to delete"
+    fi
+    NUM="$(ls $DIR/$factlet_dir/$NOW/ | wc -l)"
+    printf "$(date +'%Y-%m-%d'),$NUM" >> $DIR/visualization_things/factletdata.csv
     git -C $DIR/ add $DIR/$factlet_dir/$NOW/$NAME.md
     git -C $DIR/ commit -m "new factlet for $NOW"
     git -C $DIR/ push origin 
+
 else
     echo "O.K.; keep thinking!"
 fi
